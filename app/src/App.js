@@ -4,8 +4,10 @@ import { Drizzle } from "@drizzle/store";
 import drizzleOptions from "./drizzleOptions";
 import MyComponent from "./MyComponent";
 import "./App.css";
+import store from './middleware'
 
-const drizzle = new Drizzle(drizzleOptions);
+// const drizzle = new Drizzle(drizzleOptions); //BEFORE
+const drizzle = new Drizzle(drizzleOptions, store);//AFTER
 
 const App = () => {
   return (
